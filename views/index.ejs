@@ -8,7 +8,10 @@
   </head>
 
 <body>
-  <ul id="messages"></ul>
+  <div class="container">
+    <h1>Header</h1>
+    <ul id="messages" class="container2"></ul>
+  </div>
     <form action="">
       <input id="m" autocomplete="off" /><button>Send</button>
     </form>
@@ -22,7 +25,9 @@
       return false;
     });
     socket.on('chat message', function(msg){
-      $('#messages').append($('<li>').text(msg));
+    //   $('#messages').append($('<li>').text(msg));
+    // });
+      $('#messages').append($(msg));
     });
   </script>
 </body>
